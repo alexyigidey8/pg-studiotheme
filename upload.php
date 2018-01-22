@@ -81,7 +81,7 @@
 		}
 		
 		file_put_contents('themeconfig.php', '<?php return ' . var_export($theme, true) . ';');
-		echo "<meta http-equiv='refresh' content='0'>";
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		
 	}
 ?>
